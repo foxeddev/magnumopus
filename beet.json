@@ -1,7 +1,8 @@
 {
-  "name": "Beet Template",
-  "version": "1.2.0",
-  "description": "A pre-configured template to quickly set up your Minecraft Beet project.",
+  "id": "elixirvitae",
+  "name": "Elixir Vitae",
+  "version": "0.1.0",
+  "description": "",
   "author": "FoxedDev",
   "output": "build",
   "require": [
