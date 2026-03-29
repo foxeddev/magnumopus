@@ -1,0 +1,15 @@
+### Beet ###
+
+# Beet cache
+.beet_cache/
+
+# Beet output
+build/
+
+### Python ###
+
+# Cache
+__pycache__/
+
+# Environments
+.venv

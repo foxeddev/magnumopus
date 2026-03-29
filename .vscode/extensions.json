@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "mikoz.black-py",
+    "mcbeet.vscode-beet",
+    "amandin.dpc-pack"
+  ],
+  "unwantedRecommendations": ["SPGoding.datapack-language-server"]
+}

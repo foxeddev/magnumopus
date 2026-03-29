@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "beet",
+      "icon": {
+        "id": "eye-watch"
+      },
+      "type": "shell",
+      "isBackground": true,
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "linux": {
+        "command": ".vscode/task_linux.sh"
+      },
+      "windows": {
+        "command": ".vscode/task_windows.bat"
+      }
+    }
+  ]
+}

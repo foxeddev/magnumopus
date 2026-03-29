@@ -1,0 +1,28 @@
+{
+  "name": "Beet Template",
+  "version": "1.2.0",
+  "description": "A pre-configured template to quickly set up your Minecraft Beet project.",
+  "author": "FoxedDev",
+  "output": "build",
+  "require": [
+    "bolt"
+  ],
+  "data_pack": {
+    "load": [
+      "src"
+    ]
+  },
+  "resource_pack": {
+    "load": [
+      "src"
+    ]
+  },
+  "pipeline": [
+    "build.main",
+    "plugins.pack_install",
+    "plugins.advancement_icon",
+    "mecha",
+    "plugins.output_zip",
+    "plugins.fix_unicode"
+  ]
+}
