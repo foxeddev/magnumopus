@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:recovery_compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "magnumopus": {
+                    "item": "earth_essence"
+                  }
+                },
+                "minecraft:item_name": "Earth Essence",
+                "minecraft:item_model": "magnumopus:item/earth_essence",
+                "minecraft:rarity": "rare"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

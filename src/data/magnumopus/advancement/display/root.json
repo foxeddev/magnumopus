@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:recovery_compass",
+      "components": {
+        "minecraft:item_model": "magnumopus:icon/philosophers_stone"
+      }
+    },
+    "title": "Alchemy",
+    "description": "",
+    "background": "minecraft:block/stone_bricks",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {}
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S",
+    "I"
+  ],
+  "key": {
+    "I": "minecraft:stick",
+    "S": "#minecraft:stone_crafting_materials"
+  },
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "magnumopus": {
+          "item": "pestle"
+        }
+      },
+      "minecraft:item_name": "Pestle",
+      "minecraft:item_model": "magnumopus:item/pestle",
+      "minecraft:rarity": "common",
+      "minecraft:consumable": {
+        "consume_seconds": 2147483647,
+        "animation": "brush",
+        "has_consume_particles": false
+      }
+    },
+    "count": 1,
+    "id": "minecraft:recovery_compass"
+  }
+}

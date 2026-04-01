@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:recovery_compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "magnumopus": {
+                    "item": "pestle"
+                  }
+                },
+                "minecraft:item_name": "Pestle",
+                "minecraft:item_model": "magnumopus:item/pestle",
+                "minecraft:rarity": "common",
+                "minecraft:consumable": {
+                  "consume_seconds": 2147483647,
+                  "animation": "brush",
+                  "has_consume_particles": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

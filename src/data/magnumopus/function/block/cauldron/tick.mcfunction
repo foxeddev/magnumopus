@@ -1,79 +1,53 @@
 execute as @e[type=marker, tag=magnumopus.cauldron] at @s:
-    execute unless block ~ ~ ~ cauldron run kill
+    tag @n[type=item_display, tag=magnumopus.cauldron.earth, distance=..0.01] add current_earth_display
+    execute unless block ~ ~ ~ minecraft:cauldron:
+        kill @n[tag=current_earth_display]
+        kill @s
 
-execute as @e[type=interaction, tag=magnumopus.cauldron] at @s:
-    execute unless block ~ ~ ~ cauldron run kill
+    # calculate earth level
+    scoreboard players set .earth_level temp 0
+    execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:raw_iron"}]:
+        scoreboard players add .earth_level temp 1
+    execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:amethyst_shard"}]:
+        scoreboard players add .earth_level temp 1
+    execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:bone_meal"}]:
+        scoreboard players add .earth_level temp 1
+    execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:clay_ball"}]:
+        scoreboard players add .earth_level temp 1
+    # TODO: replace with custom mandrake root item
+    execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:recovery_compass"}]:
+        scoreboard players add .earth_level temp 1
 
-    execute positioned ~-0.5 ~0.001 ~-0.5 run tag @n[type=marker, tag=magnumopus.cauldron, distance=..0.01] add current_marker
+    # show earth level
+    scoreboard players set .visible_earth_height temp 20
+    scoreboard players set .visible_earth_height_multiplier temp 15
+    scoreboard players operation .visible_earth_height_multiplier temp *= .earth_level temp
+    scoreboard players operation .visible_earth_height temp += .visible_earth_height_multiplier temp
+    execute store result entity @n[tag=current_earth_display] transformation.translation[1] float 0.01 run scoreboard players get .visible_earth_height temp
 
-    execute if data entity @s interaction:
-        execute unless data entity @n[tag=current_marker] data.magnumopus.item:
-            data remove storage ./temp item
-            execute on target run data modify storage ./temp item set from entity @s SelectedItem
-            data modify storage ./temp item.count set value 1
+    # test for burying
+    execute:
+        execute unless score .earth_level temp matches 5 run return:
+            scoreboard players reset @s magnumopus.bury_time
+        execute if predicate {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "can_see_sky": true
+            }
+        } run return:
+            scoreboard players reset @s magnumopus.bury_time
+        execute unless score @s magnumopus.bury_time matches 1..:
+            execute store result score @s magnumopus.max_bury_time run random value 200..240 # 20000..24000
+        execute if score @s magnumopus.bury_time > @s magnumopus.max_bury_time run return:
+            playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~
+            loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:earth_essence
+            data remove entity @s data.magnumopus.grinded_items
+        scoreboard players add @s magnumopus.bury_time 1
 
-            execute if data storage ./temp item:
-                data modify entity @n[tag=current_marker] data.magnumopus.item set from storage ./temp item
+    tag @e[tag=current_earth_display] remove current_earth_display
 
-                execute on target run item modify entity @s[gamemode=!creative] weapon.mainhand {
-                    "function": "minecraft:set_count",
-                    "count": -1,
-                    "add": true,
-                    "conditions": []
-                }
+execute as @e[type=item]:
+    execute unless entity @s[tag=magnumopus.is_being_grinded] run return:
+        scoreboard players reset @s magnumopus.grind_time
 
-        data remove entity @s interaction
-
-    execute if data entity @s attack:
-        execute if data entity @n[tag=current_marker] data.magnumopus.item:
-            data remove storage ./temp item
-            data modify storage ./temp item set from entity @n[tag=current_marker] data.magnumopus.item
-            summon item ~ ~1 ~ {Item: {id: "minecraft:stick"}, Tags: ["new"]}
-            execute as @n[type=item, tag=new]:
-                data modify entity @s Item set from storage ./temp item
-            data remove entity @n[tag=current_marker] data.magnumopus.item
-
-        data remove entity @s attack
-
-    tag @e[tag=current_marker] remove current_marker
-
-    scoreboard players add @s magnumopus.age 1
-    execute if score @s magnumopus.age matches 2.. run kill
-
-function ./raycast:
-    scoreboard players set .rc_limit temp 50
-    function ./raycast_loop:
-        scoreboard players remove .rc_limit temp 1
-        execute if score .rc_limit temp matches ..0 run return fail
-        execute if block ~ ~ ~ cauldron run return:
-            # cauldron found
-
-            execute align xyz:
-                execute:
-                    # summon marker if none exists
-                    execute unless entity @n[type=marker, tag=magnumopus.cauldron, distance=..0.01] summon marker run return:
-                        data merge entity @s {Tags:["magnumopus.cauldron", "current_marker"], data: {name: "Cauldron"}}
-
-                    # else give the existing one a tag
-                    execute as @n[type=marker, tag=magnumopus.cauldron]:
-                        tag @s add current_marker
-
-                execute positioned ~0.5 ~-0.001 ~0.5:
-                    # test for same item in cauldron and player's hand
-                    execute unless data entity @n[tag=current_marker] data.magnumopus.item unless data entity @s SelectedItem run return fail
-
-                    # summon interaction if none exists
-                    execute unless entity @n[type=interaction, tag=magnumopus.cauldron, distance=..0.01] summon interaction run return:
-                        data merge entity @s {Tags:["magnumopus.cauldron"], width: 1.002, height: 1.002, response: true}
-
-                    # else keep the existing one
-                    execute as @n[type=interaction, tag=magnumopus.cauldron]:
-                        scoreboard players set @s magnumopus.age 0
-
-                tag @e[tag=current_marker] remove current_marker
-
-        execute positioned ^ ^ ^0.1 run function ./raycast_loop
-
-    function ./raycast_loop
-
-execute as @a at @s anchored eyes run function ./raycast
+    tag @s remove magnumopus.is_being_grinded
