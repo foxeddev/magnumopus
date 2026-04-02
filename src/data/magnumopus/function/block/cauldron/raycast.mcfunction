@@ -2,7 +2,7 @@ execute unless entity @n[type=marker, tag=magnumopus.cauldron, distance=..0.01]:
     # register cauldron
     function ./create
 
-execute if entity @s[tag=magnumopus.using_pestle]:
+execute if entity @s[tag=magnumopus.using_pestle] if block ~ ~ ~ minecraft:cauldron:
     # player is using pestle
     tag @s add current_player
     execute align xyz:

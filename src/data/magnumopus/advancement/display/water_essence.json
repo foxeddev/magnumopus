@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:recovery_compass",
+      "components": {
+        "minecraft:item_model": "magnumopus:item/water_essence"
+      }
+    },
+    "title": "▽ Aqua",
+    "description": "Obtain Water Essence",
+    "frame": "task"
+  },
+  "parent": "magnumopus:display/root",
+  "criteria": {
+    "obtain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "components": {
+              "minecraft:custom_data": {
+                "magnumopus": {
+                  "item": "water_essence"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {}
+}
