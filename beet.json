@@ -2,7 +2,7 @@
   "id": "magnumopus",
   "name": "Magnum Opus",
   "version": "0.1.0",
-  "description": "",
+  "description": "Adds alchemy to the game.",
   "author": "FoxedDev",
   "output": "build",
   "require": [
