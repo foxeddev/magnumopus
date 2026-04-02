@@ -7,7 +7,7 @@
       }
     },
     "title": "Alchemy",
-    "description": "",
+    "description": "The art of transforming and perfecting substances.",
     "background": "minecraft:block/stone_bricks",
     "show_toast": false,
     "announce_to_chat": false
