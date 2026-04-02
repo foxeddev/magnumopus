@@ -35,7 +35,7 @@ execute:
     } run return:
         scoreboard players reset @s magnumopus.bury_time
     execute unless score @s magnumopus.bury_time matches 1..:
-        execute store result score @s magnumopus.max_bury_time run random value 20000..24000
+        execute store result score @s magnumopus.max_bury_time run random value 2000..2400
     execute if score @s magnumopus.bury_time > @s magnumopus.max_bury_time run return:
         playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~
         loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:earth_essence
