@@ -12,8 +12,7 @@ execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:bone_mea
     scoreboard players add .earth_level temp 1
 execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:clay_ball"}]:
     scoreboard players add .earth_level temp 1
-# TODO: replace with custom mandrake root item
-execute if data entity @s data.magnumopus.grinded_items[{id: "minecraft:recovery_compass"}]:
+execute if data entity @s data.magnumopus.grinded_items[{components: {"minecraft:custom_data": {magnumopus: {item: "mandrake_root"}}}}]:
     scoreboard players add .earth_level temp 1
 
 # show earth level

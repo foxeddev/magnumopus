@@ -25,7 +25,7 @@ execute:
 
     tag @s remove current_marker
 
-# calculate earth level
+# calculate water level
 scoreboard players set .water_level temp 0
 execute if data entity @s data.magnumopus.boiled_items[{id: "minecraft:glow_ink_sac"}]:
     scoreboard players add .water_level temp 1
@@ -35,8 +35,7 @@ execute if data entity @s data.magnumopus.boiled_items[{id: "minecraft:heart_of_
     scoreboard players add .water_level temp 1
 execute if data entity @s data.magnumopus.boiled_items[{id: "minecraft:prismarine_crystals"}]:
     scoreboard players add .water_level temp 1
-# TODO: replace with custom ice crystal item
-execute if data entity @s data.magnumopus.boiled_items[{id: "minecraft:recovery_compass"}]:
+execute if data entity @s data.magnumopus.boiled_items[{components: {"minecraft:custom_data": {magnumopus: {item: "ice_crystal"}}}}]:
     scoreboard players add .water_level temp 1
 
 # test for infusion

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "magnumopus:chests/igloo"
+        }
+      ]
+    }
+  ],
+  "functions": [],
+  "random_sequence": "minecraft:chests/igloo_chest"
+}
