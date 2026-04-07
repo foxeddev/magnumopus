@@ -19,11 +19,9 @@
       "minecraft:item_name": "Pestle",
       "minecraft:item_model": "magnumopus:item/pestle",
       "minecraft:rarity": "common",
-      "minecraft:consumable": {
-        "consume_seconds": 2147483647,
-        "animation": "brush",
-        "has_consume_particles": false
-      }
+      "minecraft:damage": 0,
+      "minecraft:max_damage": 1000,
+      "minecraft:max_stack_size": 1
     },
     "count": 1,
     "id": "minecraft:recovery_compass"

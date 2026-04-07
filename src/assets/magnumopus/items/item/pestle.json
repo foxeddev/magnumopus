@@ -3,5 +3,6 @@
   "model": {
     "type": "minecraft:model",
     "model": "minecraft:item/lever"
-  }
+  },
+  "hand_animation_on_swap": false
 }
