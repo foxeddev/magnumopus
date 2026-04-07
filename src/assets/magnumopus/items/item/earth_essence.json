@@ -1,7 +1,6 @@
 {
-  "__comment": "TODO: replace with actual texture",
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:block/dirt"
+    "model": "magnumopus:earth_essence"
   }
 }
