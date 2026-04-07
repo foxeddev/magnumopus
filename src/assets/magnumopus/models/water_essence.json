@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "elixir:block/prismarine_bricks",
-		"2": "elixir:block/water_essence",
-		"particle": "elixir:block/prismarine_bricks"
+		"0": "magnumopus:item/water_essence/prismarine_bricks",
+		"2": "magnumopus:item/water_essence/water_essence",
+		"particle": "magnumopus:item/water_essence/prismarine_bricks"
 	},
 	"elements": [
 		{

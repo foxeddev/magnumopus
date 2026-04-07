@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:recovery_compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "magnumopus": {
+                    "item": "air_essence"
+                  }
+                },
+                "minecraft:item_name": "Air Essence",
+                "minecraft:item_model": "magnumopus:item/air_essence",
+                "minecraft:rarity": "rare",
+                "minecraft:max_stack_size": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}
