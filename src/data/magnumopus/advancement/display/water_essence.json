@@ -8,7 +8,8 @@
     },
     "title": "▽ Essentia Aquae",
     "description": "Obtain Water Essence",
-    "frame": "task"
+    "frame": "task",
+    "hidden": true
   },
   "parent": "magnumopus:display/root",
   "criteria": {

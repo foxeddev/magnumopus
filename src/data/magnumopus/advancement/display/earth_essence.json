@@ -8,7 +8,8 @@
     },
     "title": "🜃 Essentia Terrae",
     "description": "Obtain Earth Essence",
-    "frame": "task"
+    "frame": "task",
+    "hidden": true
   },
   "parent": "magnumopus:display/root",
   "criteria": {
