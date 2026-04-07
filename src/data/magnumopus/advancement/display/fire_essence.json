@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:recovery_compass",
+      "components": {
+        "minecraft:item_model": "magnumopus:item/fire_essence"
+      }
+    },
+    "title": "△ Essentia Ignis",
+    "description": "Obtain Fire Essence",
+    "frame": "task",
+    "hidden": true
+  },
+  "parent": "magnumopus:display/root",
+  "criteria": {
+    "obtain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "components": {
+              "minecraft:custom_data": {
+                "magnumopus": {
+                  "item": "fire_essence"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {}
+}
