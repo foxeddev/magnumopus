@@ -1,7 +1,6 @@
 {
-  "__comment": "TODO: replace with actual texture",
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/torchflower_seeds"
+    "model": "magnumopus:item/ember_seeds"
   }
 }
