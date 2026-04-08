@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "magnumopus:item/ember_seeds"
+        "layer0": "magnumopus:item/item/ember_seeds"
     }
 }
