@@ -53,6 +53,6 @@ execute:
         execute store result score @s magnumopus.max_infuse_time run random value 2000..2400
     execute if score @s magnumopus.infuse_time > @s magnumopus.max_infuse_time run return:
         playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~
-        loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:water_essence
+        loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:item/water_essence
         data remove entity @s data.magnumopus.boiled_items
     scoreboard players add @s magnumopus.infuse_time 1

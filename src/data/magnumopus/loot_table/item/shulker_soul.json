@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:recovery_compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "magnumopus": {
+                    "item": "shulker_soul"
+                  }
+                },
+                "minecraft:item_name": "Shulker Soul",
+                "minecraft:item_model": "magnumopus:item/shulker_soul",
+                "minecraft:rarity": "common"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

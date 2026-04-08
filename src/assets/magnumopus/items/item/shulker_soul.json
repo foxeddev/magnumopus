@@ -1,0 +1,11 @@
+{
+  "__comment": "TODO: replace with actual texture",
+  "model": {
+    "type": "minecraft:special",
+    "base": "minecraft:item/shulker_box",
+    "model": {
+      "type": "minecraft:shulker_box",
+      "texture": "minecraft:shulker"
+    }
+  }
+}
