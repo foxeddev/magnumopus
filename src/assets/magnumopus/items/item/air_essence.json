@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "magnumopus:air_essence"
+    "model": "magnumopus:item/air_essence"
   }
 }

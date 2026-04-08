@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "magnumopus:item/item/ice_crystal"
+    "layer0": "magnumopus:item/icon/philosophers_stone"
   }
 }

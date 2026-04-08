@@ -7,6 +7,7 @@ execute as @e[type=marker, tag=magnumopus.cauldron] at @s:
     function ./earth/tick
     function ./water/tick
     function ./fire/tick
+    function ./air/tick
 
     tag @e[tag=current_earth_display] remove current_earth_display
 

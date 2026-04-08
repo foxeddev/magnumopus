@@ -26,5 +26,5 @@ execute if data entity @s data.magnumopus.burnt_items[{components: {"minecraft:c
 
 execute if score .fire_level temp matches 5:
     playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~
-    loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:fire_essence
+    loot spawn ~0.5 ~0.5 ~0.5 loot magnumopus:item/fire_essence
     data remove entity @s data.magnumopus.burnt_items

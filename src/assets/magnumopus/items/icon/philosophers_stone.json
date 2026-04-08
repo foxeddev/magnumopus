@@ -1,7 +1,6 @@
 {
-  "__comment": "TODO: replace with actual texture",
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:block/redstone_block"
+    "model": "magnumopus:icon/philosophers_stone"
   }
 }

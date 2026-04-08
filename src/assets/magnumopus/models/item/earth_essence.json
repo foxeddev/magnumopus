@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "magnumopus:item/earth_essence/coarse_dirt",
-		"1": "magnumopus:item/earth_essence/earth_essence",
-		"particle": "magnumopus:item/earth_essence/coarse_dirt"
+		"0": "magnumopus:item/item/earth_essence/coarse_dirt",
+		"1": "magnumopus:item/item/earth_essence/earth_essence",
+		"particle": "magnumopus:item/item/earth_essence/coarse_dirt"
 	},
 	"elements": [
 		{

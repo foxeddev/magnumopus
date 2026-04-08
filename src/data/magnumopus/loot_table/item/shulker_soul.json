@@ -12,13 +12,12 @@
               "components": {
                 "minecraft:custom_data": {
                   "magnumopus": {
-                    "item": "ice_crystal"
+                    "item": "shulker_soul"
                   }
                 },
-                "minecraft:item_name": "Ice Crystal",
-                "minecraft:item_model": "magnumopus:item/ice_crystal",
-                "minecraft:rarity": "common",
-                "minecraft:max_stack_size": 16
+                "minecraft:item_name": "Shulker Soul",
+                "minecraft:item_model": "magnumopus:item/shulker_soul",
+                "minecraft:rarity": "common"
               }
             }
           ]

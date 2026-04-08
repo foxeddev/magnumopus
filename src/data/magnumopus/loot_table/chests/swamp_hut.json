@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "magnumopus:mandrake_root"
+          "value": "magnumopus:item/mandrake_root"
         }
       ]
     },

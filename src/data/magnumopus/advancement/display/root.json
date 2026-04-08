@@ -13,8 +13,8 @@
     "announce_to_chat": false
   },
   "criteria": {
-    "tick": {
-      "trigger": "minecraft:tick"
+    "impossible": {
+      "trigger": "minecraft:impossible"
     }
   },
   "rewards": {}

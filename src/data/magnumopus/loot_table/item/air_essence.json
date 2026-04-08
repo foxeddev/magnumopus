@@ -18,6 +18,9 @@
                 "minecraft:item_name": "Air Essence",
                 "minecraft:item_model": "magnumopus:item/air_essence",
                 "minecraft:rarity": "rare",
+                "minecraft:damage_resistant": {
+                  "types": "#minecraft:is_lightning"
+                },
                 "minecraft:max_stack_size": 1
               }
             }
