@@ -7,7 +7,5 @@ scoreboard objectives add magnumopus.boil_time dummy
 scoreboard objectives add magnumopus.max_boil_time dummy
 scoreboard objectives add magnumopus.infuse_time dummy
 scoreboard objectives add magnumopus.max_infuse_time dummy
-scoreboard objectives add magnumopus.burn_time dummy
-scoreboard objectives add magnumopus.max_burn_time dummy
 
 tellraw @a[tag=is_dev] "Reloaded!"
