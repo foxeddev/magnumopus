@@ -3,9 +3,10 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "magnumopus:item/block/altar_side",
-		"1": "magnumopus:item/block/altar_result_top",
+		"1": "magnumopus:item/block/altar_top",
 		"2": "magnumopus:item/block/altar_bottom",
-		"particle": "magnumopus:item/block/altar_result_top"
+		"3": "magnumopus:item/block/dragon_egg",
+		"particle": "magnumopus:item/block/altar_top"
 	},
 	"elements": [
 		{
@@ -18,6 +19,19 @@
 				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
 				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"from": [1, 1, 1],
+			"to": [15, 15, 15],
+			"color": 3,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
 			}
 		}
 	]

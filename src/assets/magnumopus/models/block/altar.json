@@ -5,7 +5,7 @@
 		"0": "magnumopus:item/block/altar_side",
 		"1": "magnumopus:item/block/altar_top",
 		"2": "magnumopus:item/block/altar_bottom",
-		"3": "magnumopus:item/block/coarse_dirt",
+		"3": "magnumopus:item/block/tuff",
 		"particle": "magnumopus:item/block/altar_top"
 	},
 	"elements": [
@@ -16,7 +16,7 @@
 				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
 				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
 			}
@@ -24,7 +24,6 @@
 		{
 			"from": [1, 1, 1],
 			"to": [15, 15, 15],
-			"color": 3,
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
