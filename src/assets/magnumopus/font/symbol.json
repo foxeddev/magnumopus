@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "magnumopus:font/symbol/squared_circle.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "Q"
+      ]
+    }
+  ]
+}

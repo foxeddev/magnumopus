@@ -16,7 +16,5 @@ execute as @e[type=marker, tag=magnumopus.ritual] at @s:
     execute as @n[type=item_display,tag=aj.magnumopus.root]:
         function animated_java:magnumopus/animations/ritual/stop
         function animated_java:global/remove/entity_stack
-    particle minecraft:explosion_emitter
-    playsound minecraft:entity.generic.explode block @a ~ ~ ~ 1 0
     function magnumopus:block/philosophers_stone/create
     kill @s
