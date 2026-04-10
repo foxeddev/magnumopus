@@ -6,5 +6,6 @@ execute as @e[type=marker, tag=magnumopus.altar_fire, tag=!is_active] at @s:
             kill @s
     execute if score .item temp matches 1:
         # activate
+        playsound minecraft:block.end_portal_frame.fill block @a ~ ~ ~ 1 0
         data modify entity @n[type=item_display, distance=..0.01] item.components."minecraft:item_model" set value "magnumopus:block/altar_fire"
         tag @s add is_active

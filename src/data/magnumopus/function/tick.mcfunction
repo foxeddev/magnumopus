@@ -10,6 +10,4 @@ function ./item/pestle/tick
 
 function ./structure/temple_basement/tick
 
-function ./effect/immortality/tick
-
-function ./pid/tick
+function ./ritual/tick

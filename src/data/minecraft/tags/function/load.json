@@ -1,5 +1,6 @@
 {
   "values": [
+    "animated_java:global/on_load",
     "magnumopus:load"
   ]
 }

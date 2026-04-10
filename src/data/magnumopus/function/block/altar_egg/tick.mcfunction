@@ -19,5 +19,6 @@ execute as @e[type=marker, tag=magnumopus.altar_egg] at @s:
     execute if block ~ ~1 ~ minecraft:dragon_egg:
         setblock ~ ~1 ~ minecraft:air
         # activate
+        playsound minecraft:block.end_portal_frame.fill block @a ~ ~ ~ 1 0
         data modify entity @n[type=item_display, distance=..0.01] item.components."minecraft:item_model" set value "magnumopus:block/altar_egg"
         tag @s add is_active
