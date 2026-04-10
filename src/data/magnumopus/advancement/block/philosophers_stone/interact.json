@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": {
+            "Tags": [
+              "magnumopus.philosophers_stone"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "magnumopus:block/philosophers_stone/interact"
+  }
+}

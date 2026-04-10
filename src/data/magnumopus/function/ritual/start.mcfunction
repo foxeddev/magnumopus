@@ -1,0 +1,1 @@
+function magnumopus:block/philosophers_stone/create
