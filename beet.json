@@ -3,7 +3,7 @@
   "name": "Magnum Opus",
   "version": "1.0.0",
   "description": "A hidden trapdoor. A forgotten path. An ancient alchemical secret waiting to be uncovered.",
-  "author": "EnderFox Studios",
+  "author": "GalaxyFoxed Studios",
   "output": "build",
   "require": [
     "bolt"
