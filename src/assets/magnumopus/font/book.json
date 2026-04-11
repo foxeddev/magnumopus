@@ -1,0 +1,40 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "magnumopus:font/book/earth.png",
+      "ascent": 7,
+      "height": 128,
+      "chars": [
+        "E"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "magnumopus:font/book/water.png",
+      "ascent": 7,
+      "height": 128,
+      "chars": [
+        "W"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "magnumopus:font/book/fire.png",
+      "ascent": 7,
+      "height": 128,
+      "chars": [
+        "F"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "magnumopus:font/book/air.png",
+      "ascent": 7,
+      "height": 128,
+      "chars": [
+        "A"
+      ]
+    }
+  ]
+}
