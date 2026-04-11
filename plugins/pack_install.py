@@ -12,7 +12,7 @@ class PackInstallOptions(PluginOptions):
     icon: JsonDict = {"id": "minecraft:apple"}
     author_namespace: Optional[str] = None
     author_description: str = ""
-    author_skull_owner: Optional[str] = None
+    author_icon: Optional[JsonDict] = None
     project_namespace: Optional[str] = None
     project_advancement_path: Optional[str] = None
 
@@ -34,7 +34,14 @@ def beet_default(ctx: Context):
 def pack_install(ctx: Context, opts: PackInstallOptions):
     author_namespace = opts.author_namespace or normalize_string(ctx.project_author)
     project_namespace = opts.project_namespace or ctx.project_id
-    skull_owner = opts.author_skull_owner or ctx.project_author
+    if opts.author_icon:
+        author_icon = opts.author_icon
+    else:
+        author_icon = {
+            "id": "minecraft:player_head",
+            "components": {"minecraft:profile": ctx.project_author},
+        }
+
     project_advancement_path = (
         opts.project_advancement_path or f"{project_namespace}:install"
     )
@@ -49,7 +56,7 @@ def pack_install(ctx: Context, opts: PackInstallOptions):
         ctx.data.advancements["global:root"] = create_root_advancement()
     if not ctx.data.advancements.get(f"global:{author_namespace}"):
         ctx.data.advancements[f"global:{author_namespace}"] = create_author_advancement(
-            ctx.project_author, opts.author_description, skull_owner
+            ctx.project_author, opts.author_description, author_icon
         )
     if not ctx.data.advancements.get(project_advancement_path):
         ctx.data.advancements[project_advancement_path] = create_project_advancement(
@@ -103,17 +110,16 @@ def create_root_advancement():
 
 
 def create_author_advancement(
-    author: TextComponent, author_description: TextComponent, skull_owner: str
+    author: TextComponent,
+    author_description: TextComponent,
+    author_icon: JsonDict,
 ):
     return Advancement(
         {
             "display": {
                 "title": author,
                 "description": author_description,
-                "icon": {
-                    "id": "minecraft:player_head",
-                    "components": {"minecraft:profile": {"name": skull_owner}},
-                },
+                "icon": author_icon,
                 "show_toast": False,
                 "announce_to_chat": False,
             },

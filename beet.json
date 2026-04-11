@@ -1,9 +1,9 @@
 {
   "id": "magnumopus",
   "name": "Magnum Opus",
-  "version": "0.1.0",
-  "description": "Adds alchemy to the game.",
-  "author": "FoxedDev",
+  "version": "1.0.0",
+  "description": "A hidden trapdoor. A forgotten path. An ancient alchemical secret waiting to be uncovered.",
+  "author": "EnderFox Studios",
   "output": "build",
   "require": [
     "bolt"
@@ -25,5 +25,22 @@
     "mecha",
     "plugins.output_zip",
     "plugins.fix_unicode"
-  ]
+  ],
+  "meta": {
+    "pack_install": {
+      "author_icon": {
+        "id": "minecraft:player_head",
+        "components": {
+          "minecraft:profile": {
+            "properties": [
+              {
+                "name": "textures",
+                "value": "e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQ0ZjIyM2JlOWFlYjc4MTJjYzk4ZjQ5YTA4OGNkZWYzZTY5ODJhMzY3YzAyMGQ2OTAxZWY1YmE4Zjk1ZDI1MCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
 }
