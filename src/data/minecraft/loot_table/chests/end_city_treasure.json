@@ -6,7 +6,13 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "magnumopus:item/shulker_soul"
+          "value": "magnumopus:item/shulker_soul",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ]
         }
       ]
     },

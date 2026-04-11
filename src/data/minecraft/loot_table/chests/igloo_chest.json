@@ -6,7 +6,17 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "magnumopus:item/ice_crystal"
+          "value": "magnumopus:item/ice_crystal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
         }
       ]
     },
