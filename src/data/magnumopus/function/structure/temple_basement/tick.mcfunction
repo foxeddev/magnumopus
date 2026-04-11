@@ -1,5 +1,5 @@
 execute as @e[type=marker, tag=magnumopus.structure.temple_basement.spawn] at @s:
-    execute store result score .middle_height temp run random value 4..8
+    execute store result score .middle_height temp run random value 16..24
 
     function ./loop:
         place template magnumopus:temple_basement/middle_slice ~-1 ~ ~-1
